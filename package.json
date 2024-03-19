@@ -1,0 +1,30 @@
+{
+  "name": "leetcode",
+  "version": "0.0.1",
+  "description": "LeetCode题目解析",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint --fix Algorithms/ --ext .js,.jsx,.ts,.tsx",
+    "tsc": "tsc Algorithms/**/*.ts --outdir dist/Algorithms"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hankliu62/leetcode.git"
+  },
+  "keywords": [
+    "leetcode",
+    "typescript"
+  ],
+  "author": "hank.liu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hankliu62/leetcode/issues"
+  },
+  "homepage": "https://github.com/hankliu62/leetcode#readme",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.2"
+  }
+}
