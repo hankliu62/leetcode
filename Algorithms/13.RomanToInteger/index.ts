@@ -43,9 +43,39 @@
  */
 
 /**
- * @param {string} s
- * @return {number}
+ * 将罗马数字转换为整数。
+ * @param s 罗马数字字符串。
+ * @returns 整数表示的数值。
  */
-var romanToInt = function(s) {
+function romanToInt(s: string): number {
+  // 罗马数字和对应整数的映射表
+  const map: Record<string, number> = {
+    I: 1,
+    V: 5,
+    IV: 4,
+    IX: 9,
+    X: 10,
+    XL: 40,
+    XC: 90,
+    L: 50,
+    C: 100,
+    CD: 400,
+    CM: 900,
+    D: 500,
+    M: 1000,
+  }
 
+  let result = 0; // 初始化结果为0
+  for (let i = 0, len = s.length; i < len; i ++) {
+    // 如果当前两个字符是映射表中的组合，则累加对应的整数值，并将索引向前移动一位
+    if (map[s.slice(i, i + 2)]) {
+      result += map[s.slice(i, i + 2)];
+      i ++;
+    } else {
+      // 如果当前字符是单个罗马数字，则直接累加对应的整数值
+      result += map[s[i]];
+    }
+  }
+
+  return result; // 返回转换后的整数
 };
